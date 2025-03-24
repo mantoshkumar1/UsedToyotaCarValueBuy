@@ -1,0 +1,26 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore temporary files from editors
+*.swp
+*.swo
+*~
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore generated or temporary files
+
+# Ignore log files
+*.log
+
+# Ignore test results or temporary files
+*.tmp
+*.bak
+
+# Ignore any other intermediate files you don't want to track
+*.db
+*.sqlite
