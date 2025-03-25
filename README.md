@@ -101,6 +101,15 @@ python main.py --webpage_path "path/to/your/saved/file.mhtml"
 
 Replace `"path/to/your/saved/file.mhtml"` with the actual path to your saved file.
 
+##### --- Advance Options: How to Use This Script ---
+# 1. To run the script without fetching new data (default is False):
+#    python main.py
+#
+# 2. To run the script and fetch new data:
+#    python main.py --fetch_new_data
+#
+#   - When `--fetch_new_data` flag is used, `args.fetch_new_data` will be True.
+#   - When no flag is passed, `args.fetch_new_data` will be False.
 ### Step 3: View the Results
 
 After running the script, it will analyze the listings and display results such as:

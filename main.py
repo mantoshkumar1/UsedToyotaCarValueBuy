@@ -27,14 +27,15 @@ import os
 
 
 # Function to load the webpage file
-def load_webpage(webpage_path):
-    if not os.path.exists(webpage_path):
-        raise FileNotFoundError(f"The specified file does not exist: {webpage_path}")
-    print(f"Loading data from {webpage_path}...")
+def load_webpage(webpage_path, fetch_new_data=True):
 
-    # logic to process the .mhtml file starts here
+    if fetch_new_data:
+        if not os.path.exists(webpage_path):
+            raise FileNotFoundError(f"The specified file does not exist: {webpage_path}")
+        print(f"Loading data from {webpage_path}...")
 
-    create_car_listing_csv(mhtml_file='Search Results.mhtml')
+        # logic to process the .mhtml file starts here
+        create_car_listing_csv(mhtml_file='Search Results.mhtml') # this function will create 'car_listings.csv'.
 
     source_csv_path = "car_listings.csv"
     df = load_data_from_csv(source_csv_path)
@@ -57,15 +58,23 @@ def main():
     parser.add_argument(
         "--webpage_path",
         type=str,
-        default="Search Results.mhtml",
+        default="Search Results.mhtml", # file path
         help="Path to the saved webpage file. Default is 'Search Results.mhtml' in the project folder."
     )
 
+    # Optional argument for 'fetch_from_webpage_and_store_in_csv' (what if we just want to manually add items in "car_listings.csv"
+    # and see where my new car info lies in value score
+    parser.add_argument(
+        "--fetch_new_data",
+        action="store_true",
+        help="Set this flag if you want to fetch new data. If omitted, it defaults to False."
+    )
     args = parser.parse_args()
+    print(args)
 
     # If the --webpage_path argument is provided, use that; otherwise, use the default
     try:
-        load_webpage(args.webpage_path)
+        load_webpage(args.webpage_path, args.fetch_new_data)
     except FileNotFoundError as e:
         print(e)
 
