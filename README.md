@@ -151,7 +151,7 @@ These graphs will automatically open and save as images in your current working 
 
 ### **How Does Output Look Like (Run Example):**:
 ```bash
-(venv) UsedToyotaCarValueAnalyzer % python3 main.py --webpage_path "Search Results.mhtml"
+(venv) UsedToyotaCarValueAnalyzer % python3 main.py --webpage_path "Search Results.mhtml" --fetch_new_data
 
 Loading data from Search Results.mhtml...
 Data has been saved to car_listings.csv
