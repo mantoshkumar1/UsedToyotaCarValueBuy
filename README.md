@@ -115,7 +115,7 @@ After running the script, it will analyze the listings and display results such 
 ### Example Command:
 
 ```bash
-python main.py --webpage_path "path/to/your/saved/file.mhtml"
+python main.py --webpage_path "path/to/your/saved/file.mhtml" --fetch_new_data
 ```
 
 - `--webpage_path`: The path to the HTML file you saved earlier with the pre-owned car listings.
