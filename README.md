@@ -119,7 +119,7 @@ python main.py --webpage_path "path/to/your/saved/file.mhtml"
 ```
 
 - `--webpage_path`: The path to the HTML file you saved earlier with the pre-owned car listings.
-
+- `--fetch_new_data`: Include this flag if you need to fetch data from `.mhtml` file. This is needed for the first time to parse the `.mhtml` and fill the `csv` file.    
 ---
 
 
