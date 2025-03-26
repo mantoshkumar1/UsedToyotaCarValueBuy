@@ -96,29 +96,17 @@ Now that you have saved the car listings as an HTML file, you can run the script
 2. Run the following command in the terminal or command prompt:
 
 ```bash
-python main.py --webpage_path "path/to/your/saved/file.mhtml"
+python main.py --webpage_path "path/to/your/saved/file.mhtml" --fetch_new_data
 ```
 
 Replace `"path/to/your/saved/file.mhtml"` with the actual path to your saved file.
+
+To run the script with fetching data (from `.mhtml` file), include this flag `--fetch_new_data`. Otherwise, don't include it.
 
 After running the script, it will analyze the listings and display results such as:
 - **Best Value Buy score** for each car based on its price, mileage, transmission type, and more.
 - **Graphs** showing price vs mileage, transmission distribution, etc.
 - Sorted car listings with information like price, mileage, and a link to the car details.
-
-
-##### --- Advance Options: How to Use This Script ---
-1. To run the script without fetching new data (default is False):
-    python main.py
-
-2. To run the script and fetch new data:
-    python main.py --fetch_new_data
-
-   - When `--fetch_new_data` flag is used, `args.fetch_new_data` will be True.
-   - When no flag is passed, `args.fetch_new_data` will be False.
-   
-3. View the Results
-
 
 ---
 
